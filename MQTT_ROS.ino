@@ -3,15 +3,15 @@
 #include <PubSubClient.h>
 
 // WiFi
-const char *ssid = "UMNG_PUB"; // Enter your WiFi name
-const char *password = "";  // Enter WiFi password
+const char *ssid = ""; // Insertar contraseña de la red Wi-Fi
+const char *password = "";  // Contraseña de la red Wi-Fi a conectarse (si es publica dejar vacio)
 
-// MQTT Broker
-const char *mqtt_broker = "broker.emqx.io";
-const char *topic = "esp32_ros";
-const char *mqtt_username = "jaimito";
-const char *mqtt_password = "123456";
-const int mqtt_port = 1883;
+// Broker MQTT, llenar con los datos relevantes del broker escogido.
+const char *mqtt_broker = "";
+const char *topic = "";
+const char *mqtt_username = "";
+const char *mqtt_password = "";
+const int mqtt_port = 1884;
 
 // Motor A
 int motorAPin1 = 19; 
@@ -23,46 +23,45 @@ int motorBPin3 = 22;
 int motorBPin4 = 23; 
 int enableBPin = 17; 
 
-// Setting PWM properties 
+// Propiedades PWM 
 const int freq = 30000;
 const int pwmChannelA = 0;
 const int pwmChannelB = 1;
 const int resolution = 8;
 int dutyCycle = 200;
-char primerChar;
+char firstChar;
 
 WiFiClient espClient;
 PubSubClient client(espClient);
 
 void setup() {
- // Set software serial baud to 115200;
  Serial.begin(115200);
- // connecting to a WiFi network
+ //Conexion red Wi-Fi
  WiFi.begin(ssid, password);
  while (WiFi.status() != WL_CONNECTED) {
      delay(500);
-     Serial.println("Connecting to WiFi..");
+     Serial.println("Conectando al WiFi..");
  }
- Serial.println("Connected to the WiFi network");
- //connecting to a mqtt broker
+ Serial.println("Conectado a la red Wi-Fi.");
+ //Conexion al broker MQTT
  client.setServer(mqtt_broker, mqtt_port);
  client.setCallback(callback);
  while (!client.connected()) {
-     String client_id = "mqttx_92b495d6";
+     String client_id = ""; //insertar el id del broker mqtt que se va a usar
      client_id += String(WiFi.macAddress());
-     Serial.printf("The client %s connects to the public mqtt broker\n", client_id.c_str());
+     Serial.printf("El cliente %s se conecta al broker mqtt \n", client_id.c_str());
      if (client.connect(client_id.c_str(), mqtt_username, mqtt_password)) {
-         Serial.println("Public emqx mqtt broker connected");
+         Serial.println("Conectado al broker MQTT exitosamente");
      } else {
-         Serial.print("failed with state ");
+         Serial.print("Fallo con el estado: ");
          Serial.print(client.state());
          delay(2000);
      }
  }
- // publish and subscribe
+ // Publicar y subscribirse al topico
  client.publish(topic, "ESP32 conectada al servidor MQTT.");
  client.subscribe(topic);
-// sets the pins as outputs:
+// Colocar los pines como salida
   pinMode(motorAPin1, OUTPUT);
   pinMode(motorAPin2, OUTPUT);
   pinMode(enableAPin, OUTPUT);
@@ -70,31 +69,31 @@ void setup() {
   pinMode(motorBPin4, OUTPUT);
   pinMode(enableBPin, OUTPUT);
   
-  // configure LED PWM functionalities
+  // Configurar la funcionalidad del PWM
   ledcSetup(pwmChannelA, freq, resolution);
   ledcSetup(pwmChannelB, freq, resolution);
   
-  // attach the channel to the GPIO to be controlled
+  // Asignar el canal al pin del GPIO para el PWM
   ledcAttachPin(enableAPin, pwmChannelA);
   ledcAttachPin(enableBPin, pwmChannelB);
  
 }
 
 void callback(char *topic, byte *payload, unsigned int length) {
- Serial.print("Message arrived in topic: ");
+ Serial.print("Mensaje nuevo en el topico: ");
  Serial.println(topic);
- Serial.print("Message:");
+ Serial.print("Mensaje:");
  for (int i = 0; i < length; i++) {
      Serial.print((char) payload[i]);
      if(i == 0){
-      primerChar = (char)payload[i];
+      firstChar = (char)payload[i];
       }
  }
 }
 
 void loop() {
  client.loop();
- switch(primerChar){
+ switch(firstChar){
     case 'S':
     Serial.print("Para");
       Parar();
