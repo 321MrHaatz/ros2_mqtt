@@ -1,0 +1,38 @@
+[0.601s] Invoking command in '/home/santi/ros2_mqtt/src/ros2_mqtt_bridge': PYTHONPATH=/home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/prefix_override:/home/santi/ros2_mqtt/src/install/ros2_mqtt_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/ros2_mqtt_bridge build --build-base /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build install --record /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/install.log --single-version-externally-managed
+[0.772s] running egg_info
+[0.772s] creating ../build/ros2_mqtt_bridge/ros2_mqtt_bridge.egg-info
+[0.785s] writing ../build/ros2_mqtt_bridge/ros2_mqtt_bridge.egg-info/PKG-INFO
+[0.785s] writing dependency_links to ../build/ros2_mqtt_bridge/ros2_mqtt_bridge.egg-info/dependency_links.txt
+[0.785s] writing entry points to ../build/ros2_mqtt_bridge/ros2_mqtt_bridge.egg-info/entry_points.txt
+[0.786s] writing requirements to ../build/ros2_mqtt_bridge/ros2_mqtt_bridge.egg-info/requires.txt
+[0.786s] writing top-level names to ../build/ros2_mqtt_bridge/ros2_mqtt_bridge.egg-info/top_level.txt
+[0.786s] writing manifest file '../build/ros2_mqtt_bridge/ros2_mqtt_bridge.egg-info/SOURCES.txt'
+[0.812s] reading manifest file '../build/ros2_mqtt_bridge/ros2_mqtt_bridge.egg-info/SOURCES.txt'
+[0.812s] writing manifest file '../build/ros2_mqtt_bridge/ros2_mqtt_bridge.egg-info/SOURCES.txt'
+[0.813s] running build
+[0.813s] running build_py
+[0.813s] creating /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build
+[0.813s] creating /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build/lib
+[0.813s] creating /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build/lib/ros2_mqtt_bridge
+[0.813s] copying ros2_mqtt_bridge/__init__.py -> /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build/lib/ros2_mqtt_bridge
+[0.813s] copying ros2_mqtt_bridge/mqtt_bridge_node.py -> /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build/lib/ros2_mqtt_bridge
+[0.813s] copying ros2_mqtt_bridge/keypress_node.py -> /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build/lib/ros2_mqtt_bridge
+[0.813s] copying ros2_mqtt_bridge/keypress_node.py -> /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build/lib/ros2_mqtt_bridge
+[0.814s] copying ros2_mqtt_bridge/__init__.py -> /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build/lib/ros2_mqtt_bridge
+[0.814s] copying ros2_mqtt_bridge/mqtt_bridge_node.py -> /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build/lib/ros2_mqtt_bridge
+[0.814s] running install
+[0.818s] running install_lib
+[0.831s] creating /home/santi/ros2_mqtt/src/install/ros2_mqtt_bridge/lib/python3.10/site-packages/ros2_mqtt_bridge
+[0.831s] copying /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build/lib/ros2_mqtt_bridge/keypress_node.py -> /home/santi/ros2_mqtt/src/install/ros2_mqtt_bridge/lib/python3.10/site-packages/ros2_mqtt_bridge
+[0.832s] copying /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build/lib/ros2_mqtt_bridge/__init__.py -> /home/santi/ros2_mqtt/src/install/ros2_mqtt_bridge/lib/python3.10/site-packages/ros2_mqtt_bridge
+[0.832s] copying /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build/lib/ros2_mqtt_bridge/mqtt_bridge_node.py -> /home/santi/ros2_mqtt/src/install/ros2_mqtt_bridge/lib/python3.10/site-packages/ros2_mqtt_bridge
+[0.832s] byte-compiling /home/santi/ros2_mqtt/src/install/ros2_mqtt_bridge/lib/python3.10/site-packages/ros2_mqtt_bridge/keypress_node.py to keypress_node.cpython-310.pyc
+[0.833s] byte-compiling /home/santi/ros2_mqtt/src/install/ros2_mqtt_bridge/lib/python3.10/site-packages/ros2_mqtt_bridge/__init__.py to __init__.cpython-310.pyc
+[0.833s] byte-compiling /home/santi/ros2_mqtt/src/install/ros2_mqtt_bridge/lib/python3.10/site-packages/ros2_mqtt_bridge/mqtt_bridge_node.py to mqtt_bridge_node.cpython-310.pyc
+[0.833s] running install_egg_info
+[0.848s] Copying ../build/ros2_mqtt_bridge/ros2_mqtt_bridge.egg-info to /home/santi/ros2_mqtt/src/install/ros2_mqtt_bridge/lib/python3.10/site-packages/ros2_mqtt_bridge-0.1.0-py3.10.egg-info
+[0.849s] running install_scripts
+[0.971s] Installing keypress_node script to /home/santi/ros2_mqtt/src/install/ros2_mqtt_bridge/lib/ros2_mqtt_bridge
+[0.971s] Installing mqtt_bridge_node script to /home/santi/ros2_mqtt/src/install/ros2_mqtt_bridge/lib/ros2_mqtt_bridge
+[0.971s] writing list of installed files to '/home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/install.log'
+[0.988s] Invoked command in '/home/santi/ros2_mqtt/src/ros2_mqtt_bridge' returned '0': PYTHONPATH=/home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/prefix_override:/home/santi/ros2_mqtt/src/install/ros2_mqtt_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/ros2_mqtt_bridge build --build-base /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/build install --record /home/santi/ros2_mqtt/src/build/ros2_mqtt_bridge/install.log --single-version-externally-managed

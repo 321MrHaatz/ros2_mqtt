@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ros2_mqtt_bridge
+Version: 0.1.0
+Summary: ROS 2 to MQTT bridge
+Maintainer: your_name
+Maintainer-email: your_email@example.com
+License: Apache License 2.0
+Requires-Dist: setuptools
+Requires-Dist: pynput

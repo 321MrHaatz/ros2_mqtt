@@ -1,0 +1,3 @@
+[console_scripts]
+keypress_node = ros2_mqtt_bridge.keypress_node:main
+mqtt_bridge_node = ros2_mqtt_bridge.mqtt_bridge_node:main
