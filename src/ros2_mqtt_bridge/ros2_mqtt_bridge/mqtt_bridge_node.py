@@ -16,8 +16,8 @@ class MqttBridgeNode(Node):
         self.mqtt_client.on_connect = self.on_connect
         self.mqtt_client.on_message = self.on_message
         
-        # Connect to MQTT broker
-        self.mqtt_client.connect("broker.emqx.io", 1883, 60)
+        # Conexion al servidor MQTT, aca se deben ingresar la direccion del servidor y especificar el puerto que se usa
+        self.mqtt_client.connect(" ", 1884, 60)
         self.mqtt_client.loop_start()
 
     def on_connect(self, client, userdata, flags, rc):
